@@ -3,10 +3,9 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """Форма оформления заказа"""
     class Meta:
         model = Order
-
-
 
         fields = ['employee', 'date', 'dish']
         labels = {
@@ -19,4 +18,3 @@ class OrderForm(forms.ModelForm):
             'date': forms.DateInput(attrs={'type': 'date', 'id': "date"}),
             'dish': forms.CheckboxSelectMultiple(),
         }
-
