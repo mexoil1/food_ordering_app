@@ -22,7 +22,7 @@ Python, Django, HTML, Bootstrap
     
 4. Установите зависимости
 
- `pip install -r requirements.txt`
+    `pip install -r requirements.txt`
  
  5. Перейдите в папку с файлом `manage.py`
  
@@ -30,13 +30,13 @@ Python, Django, HTML, Bootstrap
     
  6.	Проведите миграции
  
- `python manage.py makemigrations`
+    `python manage.py makemigrations`
  
- `python manage.py migrate`
+    `python manage.py migrate`
  
  7.	Запустите проект
  
- `python manage.py runserver`
+    `python manage.py runserver`
 
 ###		Автор проекта: [Михаил Слукин](https://github.com/mexoil1)
  
