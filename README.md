@@ -15,13 +15,14 @@
     `source venv/bin/activate`
     
 4. Установите зависимости
- `pip install requirements.txt`
+ `pip install -r requirements.txt`
  
  5. Перейдите в папку с файлом `manage.py`
     `cd test_menu`
     
  6.	Проведите миграции
  `python manage.py makemigrations`
+ 
  `python manage.py migrate`
  
  7.	Запустите проект
