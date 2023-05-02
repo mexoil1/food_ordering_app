@@ -1,0 +1,38 @@
+{% extends 'includes/base.html'%}
+{% block title %}
+  Заказ еды
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="container mt-1 mb-3">
+            <h1>
+                История заказов
+            </h1>
+        </div>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                      <th scope="col">Дата</th>
+                      <th scope="col">Имя сотрудника</th>
+                      <th scope="col">Блюда</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <th scope="row">{{ order.date|date:"d E Y" }}</th>
+                            <td>{{ order.employee }}</td>
+                            <td>
+                                {% for dish in order.dish.all %}
+                                    {{ dish }}
+                                    <br>
+                                {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

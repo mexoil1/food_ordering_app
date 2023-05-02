@@ -1,0 +1,39 @@
+{% extends 'includes/base.html'%}
+{% block title %}
+  Заказ еды
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center mt-1 mb-3">
+        <h1>
+            Отчёт за {{ date }}
+        </h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Блюдо</th>
+            <th scope="col">Количество</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Сумма</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for dish, countSum in dishes_count.items %}
+            <tr>
+                <th scope="row">{{ dish.name }}</th>
+                {% for count, sum in countSum.items %}
+                <td>{{ count }}</td>
+                <td>{{ dish.price }}₽</td>
+                <td>{{ sum }}₽</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="container text-end">
+        <h4>
+            Общая сумма: {{ total_price }}₽
+        </h4>
+    </div>
+{% endblock %}
