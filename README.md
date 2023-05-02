@@ -4,28 +4,38 @@
 Сотрудник заполняет форму, указывая своё имя, дату, на которую оформлять заказ и блюда из меню
 Есть возможность просмотреть историю заказов, и отчеты на каждый день, в  которых присутствовали заказы.
 
+### Технологии
+Python, Django, HTML, Bootstrap
+
 ###	Инструкция для того чтобы открыть у себя на компьютере
 1. Склонируйте репозиторий к себе на компьютер
+
     `git clone https://github.com/mexoil1/food_ordering_app.git`
     
 2. Установите виртуальные окружение
+
     `python -m venv venv`
     
 3. Разверните у себя виртуально окружение
+
     `source venv/bin/activate`
     
 4. Установите зависимости
+
  `pip install -r requirements.txt`
  
  5. Перейдите в папку с файлом `manage.py`
+ 
     `cd test_menu`
     
  6.	Проведите миграции
+ 
  `python manage.py makemigrations`
  
  `python manage.py migrate`
  
  7.	Запустите проект
+ 
  `python manage.py runserver`
 
 ###		Автор проекта: [Михаил Слукин](https://github.com/mexoil1)
